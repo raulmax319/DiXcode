@@ -5,13 +5,19 @@
 // Copyright © 2023 Raul Max. All rights reserved.
 //
   
+#ifndef APPLE_SCRIPT_MANAGER_H
+#define APPLE_SCRIPT_MANAGER_H
 
 #import <Foundation/Foundation.h>
-
-NS_ASSUME_NONNULL_BEGIN
+#import <Cocoa/Cocoa.h>
 
 @interface AppleScriptManager : NSObject
 
+- (NSArray*) runAppScriptForValue:(NSString*)value;
+- (NSString*) getActiveFileName;
+- (NSString*) getActiveWorkspace;
+- (BOOL) hasCharacter:(const char*)character forString:(NSString*)str;
+
 @end
 
-NS_ASSUME_NONNULL_END
+#endif /* APPLE_SCRIPT_MANAGER_H */
