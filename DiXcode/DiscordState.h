@@ -5,9 +5,15 @@
 // Copyright © 2023 Raul Max. All rights reserved.
 //
   
+#ifndef DISCORD_STATE_H
+#define DISCORD_STATE_H
 
-#ifndef DiscordState_h
-#define DiscordState_h
+#include <stdio.h>
 
+#include "discord.h"
 
-#endif /* DiscordState_h */
+struct DiscordState {
+  std::unique_ptr<discord::Core> core;
+};
+
+#endif /* DISCORD_STATE_H */
