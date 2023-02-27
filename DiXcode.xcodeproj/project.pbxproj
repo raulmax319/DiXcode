@@ -7,7 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F105436829AC48AD00775AB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F105436729AC48AD00775AB4 /* main.m */; };
+		F105436829AC48AD00775AB4 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = F105436729AC48AD00775AB4 /* main.mm */; };
+		F105437029AC48C800775AB4 /* discord_game_sdk.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F105436F29AC48C800775AB4 /* discord_game_sdk.dylib */; };
+		F105437329AC48EE00775AB4 /* discord_game_sdk.dylib in Copy Files (dylib) */ = {isa = PBXBuildFile; fileRef = F105437229AC48ED00775AB4 /* discord_game_sdk.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		F10543A429AC494900775AB4 /* achievement_manager.h in Sources */ = {isa = PBXBuildFile; fileRef = F105437629AC491B00775AB4 /* achievement_manager.h */; };
+		F10543A529AC494900775AB4 /* lobby_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F105437729AC491B00775AB4 /* lobby_manager.cpp */; };
+		F10543A629AC494900775AB4 /* overlay_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F105437829AC491B00775AB4 /* overlay_manager.cpp */; };
+		F10543A729AC494900775AB4 /* types.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F105437929AC491B00775AB4 /* types.cpp */; };
+		F10543A829AC494900775AB4 /* core.h in Sources */ = {isa = PBXBuildFile; fileRef = F105437A29AC491B00775AB4 /* core.h */; };
+		F10543A929AC494900775AB4 /* storage_manager.h in Sources */ = {isa = PBXBuildFile; fileRef = F105437B29AC491C00775AB4 /* storage_manager.h */; };
+		F10543AA29AC494900775AB4 /* image_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F105437C29AC491C00775AB4 /* image_manager.cpp */; };
+		F10543AB29AC494900775AB4 /* storage_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F105437D29AC491C00775AB4 /* storage_manager.cpp */; };
+		F10543AC29AC494900775AB4 /* application_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F105437E29AC491C00775AB4 /* application_manager.cpp */; };
+		F10543AD29AC494900775AB4 /* core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F105437F29AC491C00775AB4 /* core.cpp */; };
+		F10543AE29AC494900775AB4 /* event.h in Sources */ = {isa = PBXBuildFile; fileRef = F105438029AC491C00775AB4 /* event.h */; };
+		F10543AF29AC494900775AB4 /* types.h in Sources */ = {isa = PBXBuildFile; fileRef = F105438129AC491C00775AB4 /* types.h */; };
+		F10543B029AC494900775AB4 /* discord.h in Sources */ = {isa = PBXBuildFile; fileRef = F105438229AC491C00775AB4 /* discord.h */; };
+		F10543B129AC494900775AB4 /* activity_manager.h in Sources */ = {isa = PBXBuildFile; fileRef = F105438329AC491C00775AB4 /* activity_manager.h */; };
+		F10543B229AC494900775AB4 /* image_manager.h in Sources */ = {isa = PBXBuildFile; fileRef = F105438429AC491C00775AB4 /* image_manager.h */; };
+		F10543B329AC494900775AB4 /* activity_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F105438529AC491C00775AB4 /* activity_manager.cpp */; };
+		F10543B429AC494900775AB4 /* lobby_manager.h in Sources */ = {isa = PBXBuildFile; fileRef = F105438629AC491C00775AB4 /* lobby_manager.h */; };
+		F10543B529AC494900775AB4 /* overlay_manager.h in Sources */ = {isa = PBXBuildFile; fileRef = F105438729AC491C00775AB4 /* overlay_manager.h */; };
+		F10543B629AC494900775AB4 /* achievement_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F105438829AC491C00775AB4 /* achievement_manager.cpp */; };
+		F10543B729AC494900775AB4 /* store_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F105438929AC491C00775AB4 /* store_manager.cpp */; };
+		F10543B829AC494900775AB4 /* user_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F105438A29AC491C00775AB4 /* user_manager.cpp */; };
+		F10543B929AC494900775AB4 /* voice_manager.h in Sources */ = {isa = PBXBuildFile; fileRef = F105438B29AC491C00775AB4 /* voice_manager.h */; };
+		F10543BA29AC494900775AB4 /* voice_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F105438C29AC491C00775AB4 /* voice_manager.cpp */; };
+		F10543BB29AC494900775AB4 /* network_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F105438D29AC491C00775AB4 /* network_manager.cpp */; };
+		F10543BC29AC494900775AB4 /* relationship_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F105438E29AC491C00775AB4 /* relationship_manager.cpp */; };
+		F10543BD29AC494900775AB4 /* network_manager.h in Sources */ = {isa = PBXBuildFile; fileRef = F105438F29AC491C00775AB4 /* network_manager.h */; };
+		F10543BE29AC494900775AB4 /* store_manager.h in Sources */ = {isa = PBXBuildFile; fileRef = F105439029AC491C00775AB4 /* store_manager.h */; };
+		F10543BF29AC494900775AB4 /* ffi.h in Sources */ = {isa = PBXBuildFile; fileRef = F105439129AC491C00775AB4 /* ffi.h */; };
+		F10543C029AC494900775AB4 /* application_manager.h in Sources */ = {isa = PBXBuildFile; fileRef = F105439229AC491C00775AB4 /* application_manager.h */; };
+		F10543C129AC494900775AB4 /* user_manager.h in Sources */ = {isa = PBXBuildFile; fileRef = F105439329AC491C00775AB4 /* user_manager.h */; };
+		F10543C229AC494900775AB4 /* relationship_manager.h in Sources */ = {isa = PBXBuildFile; fileRef = F105439429AC491C00775AB4 /* relationship_manager.h */; };
+		F10543C529AC49C200775AB4 /* DiscordActivityManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = F10543C429AC49C200775AB4 /* DiscordActivityManager.mm */; };
+		F10543C829AC4A2000775AB4 /* AppleScriptManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = F10543C729AC4A2000775AB4 /* AppleScriptManager.mm */; };
+		F10543CC29AC4AF000775AB4 /* ActivityManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F10543CA29AC4AF000775AB4 /* ActivityManager.cpp */; };
+		F1B8F3EA29AC4D8000834693 /* Constants.mm in Sources */ = {isa = PBXBuildFile; fileRef = F1B8F3E929AC4D8000834693 /* Constants.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,11 +57,65 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		F105437129AC48D200775AB4 /* Copy Files (dylib) */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				F105437329AC48EE00775AB4 /* discord_game_sdk.dylib in Copy Files (dylib) */,
+			);
+			name = "Copy Files (dylib)";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F105436429AC48AD00775AB4 /* DiXcode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DiXcode; sourceTree = BUILT_PRODUCTS_DIR; };
-		F105436729AC48AD00775AB4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F105436729AC48AD00775AB4 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		F105436F29AC48C800775AB4 /* discord_game_sdk.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = discord_game_sdk.dylib; path = ../../Downloads/discord_game_sdk/lib/aarch64/discord_game_sdk.dylib; sourceTree = "<group>"; };
+		F105437229AC48ED00775AB4 /* discord_game_sdk.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = discord_game_sdk.dylib; sourceTree = "<group>"; };
+		F105437629AC491B00775AB4 /* achievement_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = achievement_manager.h; sourceTree = "<group>"; };
+		F105437729AC491B00775AB4 /* lobby_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lobby_manager.cpp; sourceTree = "<group>"; };
+		F105437829AC491B00775AB4 /* overlay_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = overlay_manager.cpp; sourceTree = "<group>"; };
+		F105437929AC491B00775AB4 /* types.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = types.cpp; sourceTree = "<group>"; };
+		F105437A29AC491B00775AB4 /* core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = core.h; sourceTree = "<group>"; };
+		F105437B29AC491C00775AB4 /* storage_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = storage_manager.h; sourceTree = "<group>"; };
+		F105437C29AC491C00775AB4 /* image_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = image_manager.cpp; sourceTree = "<group>"; };
+		F105437D29AC491C00775AB4 /* storage_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = storage_manager.cpp; sourceTree = "<group>"; };
+		F105437E29AC491C00775AB4 /* application_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = application_manager.cpp; sourceTree = "<group>"; };
+		F105437F29AC491C00775AB4 /* core.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = core.cpp; sourceTree = "<group>"; };
+		F105438029AC491C00775AB4 /* event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = event.h; sourceTree = "<group>"; };
+		F105438129AC491C00775AB4 /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = types.h; sourceTree = "<group>"; };
+		F105438229AC491C00775AB4 /* discord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = discord.h; sourceTree = "<group>"; };
+		F105438329AC491C00775AB4 /* activity_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = activity_manager.h; sourceTree = "<group>"; };
+		F105438429AC491C00775AB4 /* image_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = image_manager.h; sourceTree = "<group>"; };
+		F105438529AC491C00775AB4 /* activity_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = activity_manager.cpp; sourceTree = "<group>"; };
+		F105438629AC491C00775AB4 /* lobby_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lobby_manager.h; sourceTree = "<group>"; };
+		F105438729AC491C00775AB4 /* overlay_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = overlay_manager.h; sourceTree = "<group>"; };
+		F105438829AC491C00775AB4 /* achievement_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = achievement_manager.cpp; sourceTree = "<group>"; };
+		F105438929AC491C00775AB4 /* store_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = store_manager.cpp; sourceTree = "<group>"; };
+		F105438A29AC491C00775AB4 /* user_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = user_manager.cpp; sourceTree = "<group>"; };
+		F105438B29AC491C00775AB4 /* voice_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = voice_manager.h; sourceTree = "<group>"; };
+		F105438C29AC491C00775AB4 /* voice_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = voice_manager.cpp; sourceTree = "<group>"; };
+		F105438D29AC491C00775AB4 /* network_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = network_manager.cpp; sourceTree = "<group>"; };
+		F105438E29AC491C00775AB4 /* relationship_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = relationship_manager.cpp; sourceTree = "<group>"; };
+		F105438F29AC491C00775AB4 /* network_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = network_manager.h; sourceTree = "<group>"; };
+		F105439029AC491C00775AB4 /* store_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = store_manager.h; sourceTree = "<group>"; };
+		F105439129AC491C00775AB4 /* ffi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ffi.h; sourceTree = "<group>"; };
+		F105439229AC491C00775AB4 /* application_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = application_manager.h; sourceTree = "<group>"; };
+		F105439329AC491C00775AB4 /* user_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = user_manager.h; sourceTree = "<group>"; };
+		F105439429AC491C00775AB4 /* relationship_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = relationship_manager.h; sourceTree = "<group>"; };
+		F10543C329AC49C200775AB4 /* DiscordActivityManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscordActivityManager.h; sourceTree = "<group>"; };
+		F10543C429AC49C200775AB4 /* DiscordActivityManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DiscordActivityManager.mm; sourceTree = "<group>"; };
+		F10543C629AC4A2000775AB4 /* AppleScriptManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppleScriptManager.h; sourceTree = "<group>"; };
+		F10543C729AC4A2000775AB4 /* AppleScriptManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppleScriptManager.mm; sourceTree = "<group>"; };
+		F10543C929AC4AC100775AB4 /* DiscordState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscordState.h; sourceTree = "<group>"; };
+		F10543CA29AC4AF000775AB4 /* ActivityManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ActivityManager.cpp; sourceTree = "<group>"; };
+		F10543CB29AC4AF000775AB4 /* ActivityManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityManager.h; sourceTree = "<group>"; };
+		F10543CD29AC4C2600775AB4 /* DiXcode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DiXcode.entitlements; sourceTree = "<group>"; };
+		F1B8F3E829AC4D8000834693 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		F1B8F3E929AC4D8000834693 /* Constants.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Constants.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F105437029AC48C800775AB4 /* discord_game_sdk.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +133,10 @@
 		F105435B29AC48AD00775AB4 = {
 			isa = PBXGroup;
 			children = (
+				F105437429AC48FA00775AB4 /* lib */,
 				F105436629AC48AD00775AB4 /* DiXcode */,
 				F105436529AC48AD00775AB4 /* Products */,
+				F105436E29AC48C800775AB4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +151,82 @@
 		F105436629AC48AD00775AB4 /* DiXcode */ = {
 			isa = PBXGroup;
 			children = (
-				F105436729AC48AD00775AB4 /* main.m */,
+				F10543CD29AC4C2600775AB4 /* DiXcode.entitlements */,
+				F10543A329AC491F00775AB4 /* external */,
+				F105436729AC48AD00775AB4 /* main.mm */,
+				F10543C329AC49C200775AB4 /* DiscordActivityManager.h */,
+				F10543C429AC49C200775AB4 /* DiscordActivityManager.mm */,
+				F1B8F3E829AC4D8000834693 /* Constants.h */,
+				F1B8F3E929AC4D8000834693 /* Constants.mm */,
+				F10543C629AC4A2000775AB4 /* AppleScriptManager.h */,
+				F10543C729AC4A2000775AB4 /* AppleScriptManager.mm */,
+				F10543C929AC4AC100775AB4 /* DiscordState.h */,
+				F10543CA29AC4AF000775AB4 /* ActivityManager.cpp */,
+				F10543CB29AC4AF000775AB4 /* ActivityManager.h */,
 			);
 			path = DiXcode;
+			sourceTree = "<group>";
+		};
+		F105436E29AC48C800775AB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F105436F29AC48C800775AB4 /* discord_game_sdk.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F105437429AC48FA00775AB4 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				F105437229AC48ED00775AB4 /* discord_game_sdk.dylib */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		F105437529AC491B00775AB4 /* discordcpp */ = {
+			isa = PBXGroup;
+			children = (
+				F105437629AC491B00775AB4 /* achievement_manager.h */,
+				F105437729AC491B00775AB4 /* lobby_manager.cpp */,
+				F105437829AC491B00775AB4 /* overlay_manager.cpp */,
+				F105437929AC491B00775AB4 /* types.cpp */,
+				F105437A29AC491B00775AB4 /* core.h */,
+				F105437B29AC491C00775AB4 /* storage_manager.h */,
+				F105437C29AC491C00775AB4 /* image_manager.cpp */,
+				F105437D29AC491C00775AB4 /* storage_manager.cpp */,
+				F105437E29AC491C00775AB4 /* application_manager.cpp */,
+				F105437F29AC491C00775AB4 /* core.cpp */,
+				F105438029AC491C00775AB4 /* event.h */,
+				F105438129AC491C00775AB4 /* types.h */,
+				F105438229AC491C00775AB4 /* discord.h */,
+				F105438329AC491C00775AB4 /* activity_manager.h */,
+				F105438429AC491C00775AB4 /* image_manager.h */,
+				F105438529AC491C00775AB4 /* activity_manager.cpp */,
+				F105438629AC491C00775AB4 /* lobby_manager.h */,
+				F105438729AC491C00775AB4 /* overlay_manager.h */,
+				F105438829AC491C00775AB4 /* achievement_manager.cpp */,
+				F105438929AC491C00775AB4 /* store_manager.cpp */,
+				F105438A29AC491C00775AB4 /* user_manager.cpp */,
+				F105438B29AC491C00775AB4 /* voice_manager.h */,
+				F105438C29AC491C00775AB4 /* voice_manager.cpp */,
+				F105438D29AC491C00775AB4 /* network_manager.cpp */,
+				F105438E29AC491C00775AB4 /* relationship_manager.cpp */,
+				F105438F29AC491C00775AB4 /* network_manager.h */,
+				F105439029AC491C00775AB4 /* store_manager.h */,
+				F105439129AC491C00775AB4 /* ffi.h */,
+				F105439229AC491C00775AB4 /* application_manager.h */,
+				F105439329AC491C00775AB4 /* user_manager.h */,
+				F105439429AC491C00775AB4 /* relationship_manager.h */,
+			);
+			path = discordcpp;
+			sourceTree = "<group>";
+		};
+		F10543A329AC491F00775AB4 /* external */ = {
+			isa = PBXGroup;
+			children = (
+				F105437529AC491B00775AB4 /* discordcpp */,
+			);
+			path = external;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,6 +239,7 @@
 				F105436029AC48AD00775AB4 /* Sources */,
 				F105436129AC48AD00775AB4 /* Frameworks */,
 				F105436229AC48AD00775AB4 /* CopyFiles */,
+				F105437129AC48D200775AB4 /* Copy Files (dylib) */,
 			);
 			buildRules = (
 			);
@@ -119,7 +287,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F105436829AC48AD00775AB4 /* main.m in Sources */,
+				F10543A429AC494900775AB4 /* achievement_manager.h in Sources */,
+				F10543A529AC494900775AB4 /* lobby_manager.cpp in Sources */,
+				F10543A629AC494900775AB4 /* overlay_manager.cpp in Sources */,
+				F10543A729AC494900775AB4 /* types.cpp in Sources */,
+				F10543A829AC494900775AB4 /* core.h in Sources */,
+				F10543A929AC494900775AB4 /* storage_manager.h in Sources */,
+				F10543AA29AC494900775AB4 /* image_manager.cpp in Sources */,
+				F10543AB29AC494900775AB4 /* storage_manager.cpp in Sources */,
+				F10543AC29AC494900775AB4 /* application_manager.cpp in Sources */,
+				F10543AD29AC494900775AB4 /* core.cpp in Sources */,
+				F10543AE29AC494900775AB4 /* event.h in Sources */,
+				F10543C829AC4A2000775AB4 /* AppleScriptManager.mm in Sources */,
+				F10543AF29AC494900775AB4 /* types.h in Sources */,
+				F10543B029AC494900775AB4 /* discord.h in Sources */,
+				F10543B129AC494900775AB4 /* activity_manager.h in Sources */,
+				F10543B229AC494900775AB4 /* image_manager.h in Sources */,
+				F10543B329AC494900775AB4 /* activity_manager.cpp in Sources */,
+				F10543B429AC494900775AB4 /* lobby_manager.h in Sources */,
+				F10543B529AC494900775AB4 /* overlay_manager.h in Sources */,
+				F10543B629AC494900775AB4 /* achievement_manager.cpp in Sources */,
+				F10543B729AC494900775AB4 /* store_manager.cpp in Sources */,
+				F10543B829AC494900775AB4 /* user_manager.cpp in Sources */,
+				F10543C529AC49C200775AB4 /* DiscordActivityManager.mm in Sources */,
+				F10543B929AC494900775AB4 /* voice_manager.h in Sources */,
+				F10543BA29AC494900775AB4 /* voice_manager.cpp in Sources */,
+				F10543BB29AC494900775AB4 /* network_manager.cpp in Sources */,
+				F10543BC29AC494900775AB4 /* relationship_manager.cpp in Sources */,
+				F10543BD29AC494900775AB4 /* network_manager.h in Sources */,
+				F10543BE29AC494900775AB4 /* store_manager.h in Sources */,
+				F10543CC29AC4AF000775AB4 /* ActivityManager.cpp in Sources */,
+				F10543BF29AC494900775AB4 /* ffi.h in Sources */,
+				F10543C029AC494900775AB4 /* application_manager.h in Sources */,
+				F10543C129AC494900775AB4 /* user_manager.h in Sources */,
+				F10543C229AC494900775AB4 /* relationship_manager.h in Sources */,
+				F105436829AC48AD00775AB4 /* main.mm in Sources */,
+				F1B8F3EA29AC4D8000834693 /* Constants.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +441,7 @@
 		F105436C29AC48AD00775AB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DiXcode/DiXcode.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AF72TWGFLX;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -248,6 +452,7 @@
 		F105436D29AC48AD00775AB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DiXcode/DiXcode.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AF72TWGFLX;
 				ENABLE_HARDENED_RUNTIME = YES;
