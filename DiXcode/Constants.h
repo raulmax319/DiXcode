@@ -11,14 +11,6 @@
 #ifndef CONSTANTS_H
 #define CONSTANTS_H
 
-//@interface Constants : NSObject
-//
-//@property NSDictionary<NSString*, NSString*>* fileName;
-//
-//- (NSString*) getDetailedNameFor:(NSString*)name;
-//
-//@end
-
 class Constants {
 public:
   static NSDictionary<NSString*, NSString*>* fileName;
