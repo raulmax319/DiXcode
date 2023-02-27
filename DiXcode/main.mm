@@ -7,11 +7,10 @@
   
 
 #import <Foundation/Foundation.h>
+#import "DiscordActivityManager.h"
 
 int main(int argc, const char * argv[]) {
   @autoreleasepool {
-      // insert code here...
-      NSLog(@"Hello, World!");
+    return [[[DiscordActivityManager alloc] initWithClientId:967118433265274900] run];
   }
-  return 0;
 }
