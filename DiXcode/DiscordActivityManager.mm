@@ -11,6 +11,7 @@
 @implementation DiscordActivityManager
 
 - (id) initWithClientId:(NSInteger)clientId {
+  _sleepTime = 1000;
   _manager = new ActivityManager(clientId);
   _appleScript = [[AppleScriptManager alloc] init];
 
@@ -23,24 +24,17 @@
   [self startTimer];
 
   while(true) {
-    NSString* activeWindow = [_appleScript getActiveFileName];
-    NSString* workspace = [_appleScript getActiveWorkspace];
-    NSString* fileExtension = [activeWindow componentsSeparatedByString:@"."].lastObject;
-    NSString* fileName = Constants::getDetailedName(fileExtension);
+    _activeWindow = [_appleScript getActiveWindow];
+    _activeFile = [_appleScript getActiveFileName];
+    _workspace = [_appleScript getActiveWorkspace];
+    _fileExtension = [_activeFile componentsSeparatedByString:@"."].lastObject;
+    _fileName = Constants::getDetailedName(_fileExtension);
 
-    NSLog(@"File extension: %@", fileExtension);
-    NSLog(@"File name: %@", fileName);
+    [self updateActivityForSimulator];
+    [self updateActivityForIdling];
+    [self updateActivityForEditing];
 
-    [self setDetails:[[NSString alloc] initWithFormat:@"Editing %@", activeWindow]];
-    [self setWorkspace:[[NSString alloc] initWithFormat:@"Workspace: %@", workspace]];
-    [self setLargeText:[[@"Editing " stringByAppendingString:fileName] stringByAppendingString:@" file."]];
-
-    [self setSmallText:@"Xcode"];
-    [self setSmallImage:@"xcode"];
-    [self setLargeImage:fileExtension];
-
-    _manager->updateActivity();
-    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+    [self updateActivity];
   }
 
   return 0;
@@ -76,6 +70,47 @@
 
 - (void) setActivityType {
   _manager->setActivityType();
+}
+
+- (void) sleepFor:(unsigned int)milliseconts {
+  std::this_thread::sleep_for(std::chrono::milliseconds(milliseconts));
+}
+
+- (void) updateActivityForIdling {
+  while (_fileName == nil) {
+    [self setDetails:@"Idling."];
+    [self setWorkspace:[[NSString alloc] initWithFormat:@"Workspace: %@", _workspace]];
+    [self setLargeText:@"Xcode"];
+    [self setLargeImage:@"xcode-icon"];
+
+    [self updateActivity];
+  }
+}
+
+- (void) updateActivityForEditing {
+  [self setDetails:[[NSString alloc] initWithFormat:@"Editing %@", _activeFile]];
+  [self setWorkspace:[[NSString alloc] initWithFormat:@"Workspace: %@", _workspace]];
+  [self setLargeText:[[@"Editing " stringByAppendingString:_fileName] stringByAppendingString:@" file."]];
+  [self setSmallText:@"Xcode"];
+  [self setSmallImage:@"xcode-icon"];
+  [self setLargeImage:_fileExtension];
+}
+
+- (void) updateActivityForSimulator {
+  while ([_activeWindow isEqualToString:@"Simulator"]) {
+    _activeWindow = [_appleScript getActiveWindow];
+
+    [self setDetails:[@"Using " stringByAppendingString:_activeWindow]];
+    [self setLargeText:@"iOS Simulator"];
+    [self setLargeImage:@"ios-simulator"];
+
+    [self updateActivity];
+  }
+}
+
+- (void) updateActivity {
+  _manager->updateActivity();
+  [self sleepFor:_sleepTime];
 }
 
 @end

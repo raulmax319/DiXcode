@@ -26,9 +26,16 @@
 
 @interface DiscordActivityManager : NSObject
 
+@property unsigned int sleepTime;
 @property NSInteger clientId;
 @property ActivityManager* manager;
 @property AppleScriptManager* appleScript;
+
+@property (nonatomic) NSString* activeWindow;
+@property (nonatomic) NSString* activeFile;
+@property (nonatomic) NSString* workspace;
+@property (nonatomic) NSString* fileExtension;
+@property (nonatomic) NSString* fileName;
 
 - (id) initWithClientId:(NSInteger)clientId;
 
@@ -53,6 +60,11 @@
 - (void) setLargeText:(NSString*)text;
 - (void) startTimer;
 - (void) setActivityType;
+- (void) sleepFor:(unsigned int)milliseconts;
+- (void) updateActivityForSimulator;
+- (void) updateActivityForIdling;
+- (void) updateActivityForEditing;
+- (void) updateActivity;
 
 @end
 
