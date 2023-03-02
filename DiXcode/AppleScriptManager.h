@@ -16,6 +16,7 @@
 - (NSArray*) runAppScriptForValue:(NSString*)value;
 - (NSString*) getActiveFileName;
 - (NSString*) getActiveWorkspace;
+- (NSString*) getActiveWindow;
 - (BOOL) hasCharacter:(const char*)character forString:(NSString*)str;
 
 @end

@@ -82,6 +82,33 @@
   return [[NSString alloc] init];
 }
 
+- (NSString *) getActiveWindow {
+  NSString* scriptStr = @"tell application \"System Events\"\n"
+  @"get the name of every application process whose frontmost is true\n"
+  @"end tell";
+
+  NSDictionary* errorInfo = nil;
+
+  NSAppleScript* script = [[NSAppleScript alloc] initWithSource:scriptStr];
+  NSAppleEventDescriptor* descriptor = [script executeAndReturnError:&errorInfo];
+  NSInteger numberOfItems = [descriptor numberOfItems];
+
+  if (numberOfItems == 0) {
+    NSLog(@"Couldn't get active window.");
+    return @"";
+  }
+
+  for (size_t i = 1; i <= numberOfItems; ++i) {
+    NSAppleEventDescriptor* inner = [descriptor descriptorAtIndex:i];
+
+    if (inner != nil) {
+      return [inner stringValue];
+    }
+  }
+
+  return @"";
+}
+
 - (BOOL) hasCharacter:(const char *)character forString:(NSString *)str {
   return [str rangeOfString:[NSString stringWithFormat:@"%s", character]].location != NSNotFound;
 }
