@@ -24,12 +24,6 @@
   [self startTimer];
 
   while(true) {
-    _activeWindow = [_appleScript getActiveWindow];
-    _activeFile = [_appleScript getActiveFileName];
-    _workspace = [_appleScript getActiveWorkspace];
-    _fileExtension = [_activeFile componentsSeparatedByString:@"."].lastObject;
-    _fileName = Constants::getDetailedName(_fileExtension);
-
     [self updateActivityForSimulator];
     [self updateActivityForIdling];
     [self updateActivityForEditing];
@@ -78,7 +72,7 @@
 
 - (void) updateActivityForIdling {
   while (_fileName == nil) {
-    [self setDetails:@"Idling."];
+    [self setDetails:@"Idling"];
     [self setWorkspace:[[NSString alloc] initWithFormat:@"Workspace: %@", _workspace]];
     [self setLargeText:@"Xcode"];
     [self setLargeImage:@"xcode-icon"];
@@ -109,6 +103,12 @@
 }
 
 - (void) updateActivity {
+  _activeWindow = [_appleScript getActiveWindow];
+  _activeFile = [_appleScript getActiveFileName];
+  _workspace = [_appleScript getActiveWorkspace];
+  _fileExtension = [_activeFile componentsSeparatedByString:@"."].lastObject;
+  _fileName = Constants::getDetailedName(_fileExtension);
+  
   _manager->updateActivity();
   [self sleepFor:_sleepTime];
 }
