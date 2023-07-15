@@ -66,8 +66,13 @@
 
 - (NSString*) getActiveFileName {
   NSArray<NSString*>* values = [self runAppScriptForValue:@"return name of windows"];
+  NSString* fileName = [values firstObject];
 
-  return [values firstObject];
+  if ([fileName isEqual:@"DiXcode.xcodeproj"]) {
+    return @"Idling";
+  }
+
+  return fileName;
 }
 
 - (NSString *) getActiveWorkspace {
@@ -75,11 +80,16 @@
 
   for (id value : values) {
     if ([self hasCharacter:"." forString:value]) {
-      return [value componentsSeparatedByString:@"."].firstObject;
+      NSString* workspace = [value componentsSeparatedByString:@"."].firstObject;
+      if ([workspace  isEqual: @"DiXcode"]) {
+        return @"None";
+      }
+
+      return workspace;
     }
   }
 
-  return [[NSString alloc] init];
+  return @"None";
 }
 
 - (NSString *) getActiveWindow {
